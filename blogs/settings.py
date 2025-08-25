@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-viq9tz4ai&=rhx7^qx*fb-ikix*e!v)xr(4!rr_awbj#id2k=4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['nikita-django-app.onrender.com']
+ALLOWED_HOSTS = ['nikita-software-engineer.onrender.com']
 
 
 
