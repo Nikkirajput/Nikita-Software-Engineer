@@ -26,3 +26,20 @@ urlpatterns = [
 ]
 
 urlpatterns = urlpatterns + static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)
+from django.conf import settings
+from django.conf.urls.static import static
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('homeapp.urls')),
+    path('about/', include('aboutapp.urls')),
+    path('other/', include('otherapp.urls')),
+    path('portfolio/', include('portfolioapp.urls')),
+    path('blogs/', include('blogsapp.urls')),
+]
+
+if settings.DEBUG:   # Development me hi serve karega
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
