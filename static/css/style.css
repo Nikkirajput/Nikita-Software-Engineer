@@ -569,7 +569,7 @@ section{
 
 .proposal img{
     width: 40vw;
-    height: 10vw;
+    height: auto;
     margin: -4rem 0 0;
     z-index: 2;
 }
