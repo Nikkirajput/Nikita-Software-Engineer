@@ -25,8 +25,14 @@ SECRET_KEY = 'django-insecure-viq9tz4ai&=rhx7^qx*fb-ikix*e!v)xr(4!rr_awbj#id2k=4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['nikita-software-engineer.onrender.com']
+# Local aur Render dono ke liye sahi setting
+DEBUG = True
 
+ALLOWED_HOSTS = [
+    "127.0.0.1", 
+    "localhost",
+    ".onrender.com"   # Render ke liye
+]
 
 
 # Application definition
