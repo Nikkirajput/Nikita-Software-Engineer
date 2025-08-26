@@ -134,37 +134,19 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# settings.py
-import os
-
-STATIC_URL = '/static/'  # URL prefix for static files
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')  # Main static directory
-]
-
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-import os
-
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-# Optional: whitenoise ke liye
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
-import os
+# settings.pyimport os
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # STATIC FILES
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]  # local static
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')    # collectstatic yaha copy karega
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]  # Local development
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')    # collectstatic will copy here
 
-# Whitenoise for production
+# Whitenoise for production (Render/Heroku etc.)
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-# MEDIA FILES (images, uploads)
+# MEDIA FILES (user uploads)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
